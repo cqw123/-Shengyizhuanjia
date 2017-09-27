@@ -12,8 +12,8 @@
       };
       $scope.login = function () {
         var account = localStorageService.get(USER_KEY, {
-          username: 'laochen',
-          password: '654321'
+          username: 'nihao',
+          password: '123456'
         });
         if (account.username === $scope.user.username && account.password === $scope.user.password) {
           account.isLogin = true;
@@ -22,7 +22,7 @@
         }
         else {
           $ionicPopup.alert({
-            title: 'warning',
+            title: '警告',
             template: '用户或密码不正确',
             okText: '确定',
             okType: 'button-energized'

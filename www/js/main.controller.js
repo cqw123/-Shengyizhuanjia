@@ -5,14 +5,10 @@
   'use strict';
   angular.module('starter.controllers')
     .controller('MainCtrl',['$scope','localStorageService','$state',function ($scope,localStorageService,$state) {
-      var APP_KEY = 'App';
-      var app = localStorageService.get(APP_KEY,{
-        version:'1,0,0',
-        run:false
-      });
+      var app = localStorageService.get('App',{version:'1.0.0',run:false});
       if(app.run===false){
         app.run=true;
-        localStorageService.add(APP_KEY,app);
+        localStorageService.update('App',app);
         $state.go('welcome');
       }
       else{

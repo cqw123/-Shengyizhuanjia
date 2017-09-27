@@ -8,6 +8,7 @@
 .full-image{
   width:100%;
 }
-.menu-side li{
-  border-left:none;
+.on-right{
+  margin-left: 40%;
+  width: 60%;
 }
